@@ -41,7 +41,7 @@ Installation complete.
   Example: `Smoke.phar custom --config_file="path/to/my.yml"`
 
 
-###Configuration File
+### Configuration File
 
 You may configure any Smoke run using URL *whitelists* and *blacklists* as well as ruleset *definitions*. The configuration is stored in a singe YAML file, so it can be used in subsequent test runs. The configuration file may contain up to three elements:
 
@@ -53,7 +53,7 @@ You may configure any Smoke run using URL *whitelists* and *blacklists* as well 
 
 Currently, it is not possible to *blacklist* a certain URL pattern and *whitelist* another that matches a blacklisted one.
 
-####Configuration example and usage
+#### Configuration example and usage
  
 ```yaml
 responseRetriever:
@@ -101,7 +101,7 @@ To call Smoke with your config file, just issue on command line:
 Smoke.phar custom --config_file="test.yml"
 ```
 
-##How to write custom rules
+## How to write custom rules
 
 Each rule is defined in a simple PHP class that implements the `whm\Smoke\Rules\Rule` interface with a *validate* method. This is what *Rule* basically prescribes:
 
@@ -148,7 +148,7 @@ class FooTest implements Rule
 }
 ```
 
-###Use with config file
+### Use with config file
 Within your Smoke config file, you may reference your rule like this:
 
 ```yaml
@@ -160,7 +160,7 @@ rules:
 ```
 
 
-##Response object
+## Response object
 
 The *Response* object offers a bunch of useful shortcuts to things that happen 
 until a page request is finished:
